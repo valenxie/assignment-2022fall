@@ -5,12 +5,12 @@
 # And I want to finetune the trained agents so each of them is trained with 2M steps.
 
 for num in 1 5 10 20 50 100; do
-  python train_ppo.py \
+  python3 train_ppo.py \
   --env-id MetaDrive-Tut-${num}Env-v0 \
   --log-dir MetaDrive-Tut-${num}Env-v0 \
   --num-envs 10 \
   --max-steps 1000000 \
-  --restore \
+  # --restore \
   > ppo_metadrive_${num}env_train.log 2>&1 &
 done
 

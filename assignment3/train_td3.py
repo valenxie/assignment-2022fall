@@ -115,18 +115,18 @@ if __name__ == "__main__":
             action = env.action_space.sample()
         else:
             # [TODO] Uncomment these lines and learn how TD3 generates exploratory actions.
-            # action = (
-            #         policy.select_action(np.array(state))
-            #         + np.random.normal(0, max_action * args.expl_noise, size=action_dim)
-            # ).clip(-max_action, max_action)
+            action = (
+                    policy.select_action(np.array(state))
+                    + np.random.normal(0, max_action * args.expl_noise, size=action_dim)
+            ).clip(-max_action, max_action)
 
         # Perform action
         next_state, reward, done, info = env.step(action)
         done_bool = float(done)  # if episode_timesteps < env._max_episode_steps else 0
 
-        # if args.load_model:
-        #     # Modify this to load proper models!
-        #     policy.load(f"{log_dir}/models/default")
+        if args.load_model:
+            # Modify this to load proper models!
+            policy.load(f"{log_dir}/models/default")
 
         # Store data in replay buffer
         replay_buffer.add(state, action, next_state, reward, done_bool)

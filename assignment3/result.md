@@ -1,26 +1,26 @@
 # Assignment 3 of CS269 2022 Fall
 
-**NAME:** [TODO]
+**NAME:** [Valen Xie]
 
-**UID:** [TODO]
+**UID:** [605948363]
 
 
 ## Learning curves of TD3
 
 (20 points are given to the code.)
 
-### TD3 in CartPole
+### TD3 in Pendulum
 
 (5 points)
 
-[TODO]
+![](td3_pendulum.png)
 
 
 ### TD3 in MetaDrive-Tut-Easy-v0
 
 (5 points)
 
-[TODO]
+![](td3_meta.png)
 
 
 
@@ -32,7 +32,7 @@
 
 (2 points)
 
-![](cartpole-ppo.png)
+![](ppo_cartpole.png)
 
 [TODO: Replace to your figure]
 
@@ -42,10 +42,11 @@
 
 (3 points)
 
-![](metadrive-easy-ppo.png)
+![](ppo_meta.png)
 
 [TODO: Replace to your figure]
 
+I don't know why my PPO results seem really unstable I think my implementation is correct..
 
 ## Learning curves of GAIL
 
@@ -55,8 +56,7 @@
 
 (5 points)
 
-[TODO]
-
+![](gail_meta.png)
 
 
 
@@ -82,12 +82,16 @@ Please discuss the figure you get.
 
 (20 points are given to the figure.)
 
-[TODO]
+![](gail_generalization.png)
 
 
 [TODO]: Discuss the figure. Does it look normal? If not, why? Do you have any solution?
 
+The figure looks normal.
 
+![](ppo_generalization.png)
+
+This figure does not look normal, I would increase the steps.
 
 
 ## Discussion

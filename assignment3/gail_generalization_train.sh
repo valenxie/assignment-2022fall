@@ -1,7 +1,7 @@
 # Example script to run a batch of PPO generalization experiments
 
 for num in 1 5 10 20 50 100; do
-  python train_gail.py \
+  python3 train_gail.py \
   --env-id MetaDrive-Tut-${num}Env-v0 \
   --log-dir MetaDrive-Tut-${num}Env-v0 \
   --num-envs 10 \
